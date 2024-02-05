@@ -1,10 +1,10 @@
-package guru.springframework.spring6restmvc.service;
+package guru.springframework.spring6restmvc.services;
 
 import guru.springframework.spring6restmvc.model.Beer;
 
 import java.util.UUID;
 
-public interface BeerServices {
+public interface BeerService {
 
     Beer getBeerById(UUID id);
 }
