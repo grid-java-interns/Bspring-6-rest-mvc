@@ -43,6 +43,14 @@ public class CustomerServiceImpl implements CustomerService {
         customerMap.put(customer2.getId(),customer2);
         customerMap.put(customer3.getId(),customer3);
     }
+
+    @Override
+    public void updateCustomerById(UUID customerId, Customer customer) {
+        Customer existing = customerMap.get(customerId);
+        existing.setCustomerName(customer.getCustomerName());
+        existing.setLastModifiedDate(LocalDateTime.now());
+    }
+
     @Override
     public List<Customer> listCustomers() {
         return new ArrayList<>(customerMap.values());
@@ -65,4 +73,6 @@ public class CustomerServiceImpl implements CustomerService {
 
         return savedCustomer;
     }
+
+
 }

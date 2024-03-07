@@ -9,9 +9,9 @@ import java.util.UUID;
 @Builder
 @Data
 public class Customer {
-    private final String customerName;
-    private final UUID id;
-    private final Integer version;
-    private final LocalDateTime createdDate;
-    private final LocalDateTime lastModifiedDate;
+    private  String customerName;
+    private  UUID id;
+    private  Integer version;
+    private  LocalDateTime createdDate;
+    private  LocalDateTime lastModifiedDate;
 }
